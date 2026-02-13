@@ -42,14 +42,11 @@
   <h2>Форма обратной связи</h2>
 
   <form id="nps-form">
-
     <div class="q">
       <div class="q-title">
         1. Вы будете рекомендовать знакомым Райффайзен Банк как потенциального работодателя?
       </div>
-      <div class="scale" data-name="q1"
-           data-left="точно нет"
-           data-right="точно да"></div>
+      <div class="scale" data-name="q1" data-left="точно нет" data-right="точно да"></div>
       <p class="error" data-err="q1" style="display:none;"></p>
     </div>
 
@@ -57,9 +54,7 @@
       <div class="q-title">
         2. Насколько тестовое задание было для вас понятным?
       </div>
-      <div class="scale" data-name="q2"
-           data-left="совсем непонятно"
-           data-right="все понятно"></div>
+      <div class="scale" data-name="q2" data-left="совсем непонятно" data-right="все понятно"></div>
       <p class="error" data-err="q2" style="display:none;"></p>
     </div>
 
@@ -67,46 +62,54 @@
       <div class="q-title">
         3. Насколько вы довольны форматом видеоинтервью как этапом отбора?
       </div>
-      <div class="scale" data-name="q3"
-           data-left="совсем не доволен(-а)"
-           data-right="очень доволен(-а)"></div>
+      <div class="scale" data-name="q3" data-left="совсем не доволен(-а)" data-right="очень доволен(-а)"></div>
       <p class="error" data-err="q3" style="display:none;"></p>
     </div>
 
     <div class="q">
       <div class="q-title">
-        4. Насколько вы довольны информированностью о процессе отбора (этапы, сроки, что будет дальше)?
+        4. Как вы оцените профессионализм рекрутера (комфортная коммуникация, подробные ответы на вопросы о вакансии)?
       </div>
+      <!-- новый вопрос => q9 -->
+      <div class="scale" data-name="q9"
+           data-left="совсем не доволен(-а)"
+           data-right="очень доволен(-а)"
+           data-na="true"></div>
+      <p class="error" data-err="q9" style="display:none;"></p>
+    </div>
+
+    <div class="q">
+      <div class="q-title">
+        5. Насколько вы довольны профессионализмом собеседующих, кроме рекрутера?
+      </div>
+      <!-- старый вопрос => q6 -->
+      <div class="scale" data-name="q6"
+           data-left="совсем не доволен(-а)"
+           data-right="очень доволен(-а)"
+           data-na="true"></div>
+      <p class="error" data-err="q6" style="display:none;"></p>
+    </div>
+
+    <div class="q">
+      <div class="q-title">
+        6. Насколько вы довольны информированностью о процессе отбора (этапы, сроки, что будет дальше)?
+      </div>
+      <!-- старый вопрос => q7 -->
       <div class="scale" data-name="q7"
            data-left="совсем не доволен(-а)"
            data-right="очень доволен(-а)"></div>
       <p class="error" data-err="q7" style="display:none;"></p>
     </div>
 
-    <div class="q"> 
+    <div class="q">
       <div class="q-title">
-        5. Насколько вы довольны скоростью процесса найма?
+        7. Насколько вы довольны скоростью процесса найма?
       </div>
+      <!-- старый вопрос => q8 -->
       <div class="scale" data-name="q8"
            data-left="совсем не доволен(-а)"
            data-right="очень доволен(-а)"></div>
       <p class="error" data-err="q8" style="display:none;"></p>
-    </div>
-
-    <div class="q">
-      <div class="q-title">
-        6. В поле ниже вы можете поделиться своими впечатлениями о процессе отбора на Стажировку в банке.
-    </div>
-    <textarea id="free-text" name="free" class="free-text" rows="4"
-            placeholder="Напишите, что можно улучшить или что понравилось…"></textarea>
-    </div>
-
-    <div class="q">
-      <div class="q-title">
-        7. В поле ниже вы можете поделиться своими впечатлениями о чат-боте
-    </div>
-    <textarea id="bot-text" name="bot" class="free-text" rows="4"
-            placeholder="Пожалуйста, поделитесь, насколько чат-бот был удобен как формат взаимодействия для отбора на Стажировку?"></textarea>
     </div>
 
     <p class="error" id="error-global" style="display:none;"></p>
