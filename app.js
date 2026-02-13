@@ -145,18 +145,6 @@
       }
     }
 
-    const freeTextEl = document.getElementById("free-text");
-    const freeText = (freeTextEl?.value || "").trim();
-    if (freeText) {
-      answers.free = freeText;
-    }
-
-    const botTextEl = document.getElementById("bot-text");
-    const botText = (botTextEl?.value || "").trim();
-    if (botText) {
-      answers.bot = botText;
-    }
-
 
     if (!ok) return;
 
