@@ -13,10 +13,11 @@
         await vkBridge.send('VKWebAppInit');
 
         const u = await vkBridge.send('VKWebAppGetUserInfo');
-        document.getElementById('user').textContent = `User: ${u.first_name} ${u.last_name} (id: ${u.id})`;
+        console.log(u);
+        window.vkId = u.id
 
         const { access_token } = await vkBridge.send('VKWebAppGetAuthToken', {
-          app_id: 54446244,
+          app_id: 54443582,
           scope: ''
         });
 
@@ -25,11 +26,9 @@
           params: { v: '5.199', access_token }
         });
         console.log('users.get raw:', apiResp);
-        document.getElementById('api').textContent = JSON.stringify(apiResp.response || apiResp, null, 2);
 
         const launch = await vkBridge.send('VKWebAppGetLaunchParams');
         console.log('Launch (bridge):', launch);
-        document.getElementById('lp').textContent = JSON.stringify(launch, null, 2);
 
       } catch (e) {
         console.error('Bridge error:', e);
