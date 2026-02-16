@@ -9,16 +9,6 @@
   const resultEl = document.getElementById("result");
   const globalErr = document.getElementById("error-global");
 
-  async function getVkUserId() {
-    try {
-      await vkBridge.send('VKWebAppInit');
-      const u = await vkBridge.send('VKWebAppGetUserInfo');
-      return (`${u.id}_VK`);
-    } catch (err) {
-      setGlobalError(err)
-    }
-  }
-
   function setGlobalError(msg) {
     globalErr.textContent = msg;
     globalErr.style.display = "block";
@@ -117,11 +107,7 @@
       p.style.display = "none";
     });
 
-    const vkId = getVkUserId();
-    if (!vkId) {
-      setGlobalError("Не удалось определить vk-id. Откройте миниапп внутри VK.");
-      return;
-    }
+    const vkId = `${window.vkId}_VK`
 
     const answers = {};
     const required = ["q1", "q2", "q7", "q8"];
@@ -156,7 +142,6 @@
     if (botText) {
       answers.bot = botText;
     }
-
 
     if (!ok) return;
 
